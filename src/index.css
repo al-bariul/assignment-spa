@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
-* {
+/* * {
+  background-color: white;
+  color: black;
+} */
+body {
   background-color: white;
   color: black;
 }
