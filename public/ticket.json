@@ -1,128 +1,128 @@
 [
   {
-    "id": 1,
+    "id": 1001,
     "title": "Login page crashing on mobile",
     "description": "Users are unable to log in using the mobile app properly. It crashes immediately after clicking the submit button.",
     "customer": "Rahim Uddin",
     "priority": "Critical",
     "status": "Open",
-    "createdAt": "2025-12-28T10:00:00Z"
+    "createdAt": "2025-12-28"
   },
   {
-    "id": 2,
+    "id": 1002,
     "title": "Payment gateway timeout",
     "description": "Bkash payment is taking too long to process and eventually timing out for several users.",
     "customer": "Sumi Akter",
     "priority": "High",
     "status": "In Progress",
-    "createdAt": "2026-01-02T14:30:00Z"
+    "createdAt": "2026-01-02"
   },
   {
-    "id": 3,
+    "id": 1003,
     "title": "Update profile picture issue",
-    "description": "Uploading images larger than 2MB throws an unknown error instead of a validation message.",
+    "description": "Uploading images larger than 2MB throws an unknown error instead of a validati100on message.",
     "customer": "Karim Hasan",
     "priority": "Medium",
     "status": "Open",
-    "createdAt": "2026-01-05T09:15:00Z"
+    "createdAt": "2026-01-05"
   },
   {
-    "id": 4,
+    "id": 1004,
     "title": "Dark mode text readability",
     "description": "In dark mode, the text color on the dashboard is too dark, making it hard to read.",
     "customer": "Tanvir Ahmed",
     "priority": "Low",
     "status": "Resolved",
-    "createdAt": "2025-12-20T11:45:00Z"
+    "createdAt": "2025-12-20"
   },
   {
-    "id": 5,
+    "id": 1005,
     "title": "Password reset email not received",
     "description": "Customers are complaining that they are not receiving the OTP for password reset.",
     "customer": "Nadia Islam",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2026-01-06T08:00:00Z"
+    "createdAt": "2026-01-06"
   },
   {
-    "id": 6,
+    "id": 1006,
     "title": "Add export to PDF feature",
     "description": "Client requested a feature to export the monthly report as a PDF file.",
     "customer": "Global Tech Ltd.",
     "priority": "Medium",
     "status": "In Progress",
-    "createdAt": "2025-12-15T16:20:00Z"
+    "createdAt": "2025-12-15"
   },
   {
-    "id": 7,
+    "id": 1007,
     "title": "Broken link in footer",
     "description": "The 'Contact Us' link in the website footer leads to a 404 page.",
     "customer": "Farhan Sadik",
     "priority": "Low",
-    "status": "Closed",
-    "createdAt": "2025-11-30T13:10:00Z"
+    "status": "In Progress",
+    "createdAt": "2025-11-30"
   },
   {
-    "id": 8,
+    "id": 1008,
     "title": "Slow dashboard loading",
     "description": "The analytics dashboard takes more than 10 seconds to load data.",
     "customer": "Admin User",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2026-01-04T10:05:00Z"
+    "createdAt": "2026-01-04"
   },
   {
-    "id": 9,
+    "id": 1009,
     "title": "Typo in landing page",
     "description": "Spelling mistake in the main hero section headline.",
     "customer": "Marketing Team",
     "priority": "Low",
-    "status": "Resolved",
-    "createdAt": "2025-12-25T09:30:00Z"
+    "status": "Open",
+    "createdAt": "2025-12-25"
   },
   {
-    "id": 10,
+    "id": 10010,
     "title": "API response error 500",
     "description": "The user details API is returning Internal Server Error occasionally.",
     "customer": "Dev Team",
     "priority": "Critical",
     "status": "In Progress",
-    "createdAt": "2026-01-03T15:50:00Z"
+    "createdAt": "2026-01-03"
   },
   {
-    "id": 11,
+    "id": 10011,
     "title": "Search filter not working",
     "description": "Filtering products by price range is showing incorrect results.",
     "customer": "Sadia Jahan",
     "priority": "Medium",
     "status": "Open",
-    "createdAt": "2026-01-01T12:00:00Z"
+    "createdAt": "2026-01-01"
   },
   {
-    "id": 12,
+    "id": 10012,
     "title": "Mobile responsive navbar",
     "description": "Hamburger menu does not open on iPhone 12 devices.",
     "customer": "Test User",
     "priority": "High",
     "status": "Open",
-    "createdAt": "2026-01-05T18:25:00Z"
+    "createdAt": "2026-01-05"
   },
   {
-    "id": 13,
+    "id": 10013,
     "title": "Change button color",
     "description": "Client wants the 'Buy Now' button to be green instead of blue.",
     "customer": "E-com Client",
     "priority": "Low",
-    "status": "Closed",
-    "createdAt": "2025-12-10T11:00:00Z"
+    "status": "In Progress",
+    "createdAt": "2025-12-10"
   },
   {
-    "id": 14,
+    "id": 10014,
     "title": "User session expires too fast",
     "description": "Users are being logged out automatically after only 5 minutes of inactivity.",
     "customer": "Rafiqul Islam",
     "priority": "Medium",
     "status": "In Progress",
-    "createdAt": "2025-12-29T14:40:00Z"
+    "createdAt": "2025-12-29"
   }
 ]
