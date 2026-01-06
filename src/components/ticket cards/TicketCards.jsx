@@ -1,10 +1,8 @@
 import React, { use } from "react";
-// import { useState } from "react";
 
-const TicketCards = ({ ticketPromise }) => {
+const TicketCards = ({ ticketPromise, progressIncrement }) => {
   const ticketData = use(ticketPromise);
-  //   console.log(ticketData);
-  //   const [color, setColor] = useState(true);
+
   return (
     <div className="bg-yellow-500 w-[1000px] h-auto mx-auto">
       <div className="title">
@@ -29,7 +27,6 @@ const TicketCards = ({ ticketPromise }) => {
           //   Priority Logic
           const priorityStatus = priority;
           const priorityToLowerCase = priorityStatus.toLowerCase();
-          console.log(priorityToLowerCase);
 
           const priorityColor = (p) => {
             if (p === "high") return "text-red-500";
@@ -39,7 +36,10 @@ const TicketCards = ({ ticketPromise }) => {
 
           return (
             <div>
-              <div className="card w-96 bg-white card-xs shadow-sm">
+              <div
+                onClick={progressIncrement}
+                className="card w-96 bg-white card-xs shadow-sm"
+              >
                 <div className="card-body">
                   <div className="text-header flex justify-between items-center border-2">
                     <h2 className="card-title">{title}</h2>
