@@ -3,7 +3,7 @@ import React, { use } from "react";
 
 const TicketCards = ({ ticketPromise }) => {
   const ticketData = use(ticketPromise);
-  console.log(ticketData);
+  //   console.log(ticketData);
   //   const [color, setColor] = useState(true);
   return (
     <div className="bg-yellow-500 w-[1000px] h-auto mx-auto">
@@ -22,10 +22,21 @@ const TicketCards = ({ ticketPromise }) => {
             id,
           } = tdata;
 
+          //   Status Logic
           const ticketStatus = status;
-          //   console.log(ticketStatus);
-          //   console.log(toUpperCase(status));
           const ticketStatusToLowerCase = ticketStatus.toLowerCase();
+
+          //   Priority Logic
+          const priorityStatus = priority;
+          const priorityToLowerCase = priorityStatus.toLowerCase();
+          console.log(priorityToLowerCase);
+
+          const priorityColor = (p) => {
+            if (p === "high") return "text-red-500";
+            else if (p === "medium") return "text-amber-500";
+            else return "text-green-500";
+          };
+
           return (
             <div>
               <div className="card w-96 bg-white card-xs shadow-sm">
@@ -46,7 +57,13 @@ const TicketCards = ({ ticketPromise }) => {
                   <div className="flex justify-between">
                     <div className="div flex border-2">
                       <p className="mr-2">#{id}</p>
-                      <p>{priority}</p>
+                      <p
+                        className={`font-bold ${priorityColor(
+                          priorityToLowerCase
+                        )}`}
+                      >
+                        {priority}
+                      </p>
                     </div>
                     <div className="div flex border-2">
                       <p className="mr-2">{customer}</p>
