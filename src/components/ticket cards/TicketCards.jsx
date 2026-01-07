@@ -1,15 +1,13 @@
-import React, { use } from "react";
+import React from "react";
 
-const TicketCards = ({ ticketPromise, progressIncrement }) => {
-  const ticketData = use(ticketPromise);
-
+const TicketCards = ({ TicketDataSet, progressIncrement, setStatus }) => {
   return (
     <div className="bg-yellow-500 w-[1000px] h-auto mx-auto">
       <div className="title">
         <h1>Customer Tickets</h1>
       </div>
       <div className="grid grid-cols-2 gap-y-5">
-        {ticketData.map((tdata) => {
+        {TicketDataSet.map((tdata) => {
           const {
             title,
             description,
@@ -35,9 +33,12 @@ const TicketCards = ({ ticketPromise, progressIncrement }) => {
           };
 
           return (
-            <div>
+            <div key={tdata.id}>
               <div
-                onClick={progressIncrement}
+                onClick={() => {
+                  progressIncrement();
+                  setStatus((previousTitle) => [...previousTitle, title]);
+                }}
                 className="card w-96 bg-white card-xs shadow-sm"
               >
                 <div className="card-body">
@@ -72,6 +73,9 @@ const TicketCards = ({ ticketPromise, progressIncrement }) => {
                   </div>
                 </div>
               </div>
+              {/* {console.log(description)} */}
+              {/* Components Ticket Status */}
+              {/* <TicketStatus></TicketStatus>; */}
             </div>
           );
         })}

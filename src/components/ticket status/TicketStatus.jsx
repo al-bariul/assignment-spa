@@ -1,15 +1,36 @@
-import React from "react";
+const TicketStatus = ({ status, resolved, handleComplete }) => {
+  const hasStatus = status.length > 0;
+  console.log(resolved);
 
-const TicketStatus = () => {
   return (
     <div className="bg-purple-400 w-[350px] h-auto">
       <div className="task-status">
-        <p>Task Status</p>
-        <p>Select a ticket to add to task status</p>
+        <p className="text-2xl font-bold">Task Status</p>
+
+        {!hasStatus ? (
+          <p>Select a ticket to add to Task Status</p>
+        ) : (
+          <div>
+            {status.map((title, index) => (
+              <div key={index}>
+                <p>{title}</p>
+                <p onClick={() => handleComplete(title)}>Completed</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-      <div className="resolved-task">
-        <p>Resolved Task</p>
-        <p>No resolved task yet</p>
+      <div className="resolved-task mt-7">
+        <p className="text-2xl font-bold">Resolved Task</p>
+        {resolved.length === 0 ? (
+          <p>No resolved task yet</p>
+        ) : (
+          <div>
+            {resolved.map((title, index) => (
+              <div key={index}>{title} (resolved)</div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
