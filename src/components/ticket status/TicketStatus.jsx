@@ -1,6 +1,12 @@
-const TicketStatus = ({ status, resolved, handleComplete }) => {
+const TicketStatus = ({
+  status,
+  resolved,
+  handleComplete,
+  progressDecrement,
+  notification,
+}) => {
   const hasStatus = status.length > 0;
-  console.log(resolved);
+  // console.log(resolved);
 
   return (
     <div className="bg-purple-400 w-[350px] h-auto">
@@ -14,7 +20,15 @@ const TicketStatus = ({ status, resolved, handleComplete }) => {
             {status.map((title, index) => (
               <div key={index}>
                 <p>{title}</p>
-                <p onClick={() => handleComplete(title)}>Completed</p>
+                <p
+                  onClick={() => {
+                    handleComplete(title);
+                    progressDecrement();
+                    notification();
+                  }}
+                >
+                  Completed
+                </p>
               </div>
             ))}
           </div>

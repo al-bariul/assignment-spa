@@ -6,6 +6,7 @@ import Navbar from "./components/navigationBar/Navbar";
 import TicketCards from "./components/ticket cards/TicketCards";
 import TicketStatus from "./components/ticket status/TicketStatus";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const ticketData = async () => {
   const res = await fetch("/public/ticket.json");
@@ -18,12 +19,16 @@ function App() {
   const TicketDataSet = use(ticketPromise);
 
   const [progress, setProgress] = useState(0);
+  const [status, setStatus] = useState([]);
+  const [resolved, setResolved] = useState([]);
+
   const progressIncrement = () => {
     setProgress(progress + 1);
   };
 
-  const [status, setStatus] = useState([]);
-  const [resolved, setResolved] = useState([]);
+  const progressDecrement = () => {
+    setProgress(progress - 1);
+  };
 
   const handleComplete = (titleToMove) => {
     const remainingTasks = status.filter((item) => item !== titleToMove);
@@ -32,11 +37,15 @@ function App() {
     setResolved([...resolved, titleToMove]);
   };
 
+  const notification = () => {
+    toast.success("In Progress!");
+  };
+
   return (
     <>
       <Navbar></Navbar>
 
-      <Banner progress={progress}></Banner>
+      <Banner resolved={resolved.length} progress={progress}></Banner>
 
       <div className="border-2 flex w-[1200px] mx-auto gap-x-16 mt-16">
         <Suspense
@@ -46,6 +55,7 @@ function App() {
             progressIncrement={progressIncrement}
             TicketDataSet={TicketDataSet}
             setStatus={setStatus}
+            notification={notification}
           ></TicketCards>
         </Suspense>
 
@@ -53,10 +63,14 @@ function App() {
           handleComplete={handleComplete}
           resolved={resolved}
           status={status}
+          progressDecrement={progressDecrement}
+          notification={notification}
         ></TicketStatus>
       </div>
 
       <Footer></Footer>
+
+      <ToastContainer />
     </>
   );
 }

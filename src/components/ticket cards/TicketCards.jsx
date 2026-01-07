@@ -1,6 +1,11 @@
 import React from "react";
 
-const TicketCards = ({ TicketDataSet, progressIncrement, setStatus }) => {
+const TicketCards = ({
+  TicketDataSet,
+  progressIncrement,
+  setStatus,
+  notification,
+}) => {
   return (
     <div className="bg-yellow-500 w-[1000px] h-auto mx-auto">
       <div className="title">
@@ -37,6 +42,7 @@ const TicketCards = ({ TicketDataSet, progressIncrement, setStatus }) => {
               <div
                 onClick={() => {
                   progressIncrement();
+                  notification();
                   setStatus((previousTitle) => [...previousTitle, title]);
                 }}
                 className="card w-96 bg-white card-xs shadow-sm"
