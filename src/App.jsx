@@ -47,7 +47,7 @@ function App() {
 
       <Banner resolved={resolved.length} progress={progress}></Banner>
 
-      <div className="border-2 flex w-[1200px] mx-auto gap-x-16 mt-16">
+      <div className="max-w-[1200px] w-full mx-auto px-4 flex flex-col lg:flex-row gap-8 lg:gap-16 mt-16">
         <Suspense
           fallback={<span className="loading loading-ring loading-xl"></span>}
         >

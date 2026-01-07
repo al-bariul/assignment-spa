@@ -2,14 +2,14 @@ import React from "react";
 
 const Banner = ({ progress, resolved }) => {
   return (
-    <div className="flex items-center justify-between max-w-[1200px] mx-auto mt-10 ">
-      <div className="w-[550px] h-[250px] border-4 bg-red-500 flex flex-col items-center justify-center">
-        <p>In-Progress</p>
-        <p>{progress}</p>
+    <div className="flex flex-col lg:flex-row items-center justify-between max-w-[1200px] mx-auto mt-10 px-4 gap-6">
+      <div className="w-full lg:w-[48%] h-[200px] md:h-[250px] bg-gradient-to-br from-[#632EE3] to-[#9F62F2] text-white flex flex-col items-center justify-center rounded-2xl shadow-lg">
+        <p className="text-xl md:text-2xl font-medium">In-Progress</p>
+        <p className="text-5xl md:text-6xl font-bold mt-2">{progress}</p>
       </div>
-      <div className="right-card w-[550px] h-[250px] border-4 flex flex-col items-center justify-center">
-        <p>Resolved</p>
-        <p>{resolved}</p>
+      <div className="w-full lg:w-[48%] h-[200px] md:h-[250px] bg-gradient-to-br from-[#54CF68] to-[#00827A] flex flex-col items-center justify-center text-white rounded-2xl shadow-lg">
+        <p className="text-xl md:text-2xl font-medium">Resolved</p>
+        <p className="text-5xl md:text-6xl font-bold mt-2">{resolved}</p>
       </div>
     </div>
   );
