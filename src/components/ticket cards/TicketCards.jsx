@@ -45,7 +45,7 @@ const TicketCards = ({
                   notification();
                   setStatus((previousTitle) => [...previousTitle, title]);
                 }}
-                className="card w-96 bg-white card-xs shadow-sm"
+                className="card max-w-96 bg-white card-xs shadow-sm"
               >
                 <div className="card-body">
                   <div className="text-header flex justify-between items-center ">
