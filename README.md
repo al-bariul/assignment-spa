@@ -1,20 +1,20 @@
-<<<<<<< HEAD
-# React + Vite
+What is JSX, and why is it used?
+=>JSX stand for Javascript Xml. It is an extenstion for javascript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+=>JSX allows us to write html code directly inside javascript code.
 
-Currently, two official plugins are available:
+What is the difference between State and Props?
+=>props pass data from parent to child. Which unidirectional and immutable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+=>And state manage data in a component. It is mutable and stays within a component.
 
-## React Compiler
+What is the useState hook, and how does it work?
+=> useState hook is a built in function in react.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+=> const [variable_name, setVariable_name] = useState(initial value)
 
-## Expanding the ESLint configuration
+How can you share state between components in React?
+=> In react data flows downward. So we have to use lifting state up.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# assignment-spa
->>>>>>> 93e4c6f75d1b7422e2dd9b4b6fe4756448875789
+How is event handling done in React?
+=> onClick. React handle event similarly to javascript but a few camelCase difference.
